@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wool Production Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1, h3 {
+            color: #2c3e50;
+        }
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        label {
+            display: inline-block;
+            width: 120px;
+            margin-bottom: 10px;
+        }
+        input[type="text"] {
+            width: 200px;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #2980b9;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .month-inputs {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Wool Production Prediction</h1>
+    <form action="/predict" method="post">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state" required>
+        </div>
+        <h3>Enter your company's wool production for 2023 (each month):</h3>
+        <div class="month-inputs">
+            <div class="form-group">
+                <label for="jan">January:</label>
+                <input type="text" id="jan" name="jan" required>
+            </div>
+            <div class="form-group">
+                <label for="feb">February:</label>
+                <input type="text" id="feb" name="feb" required>
+            </div>
+            <div class="form-group">
+                <label for="mar">March:</label>
+                <input type="text" id="mar" name="mar" required>
+            </div>
+            <div class="form-group">
+                <label for="apr">April:</label>
+                <input type="text" id="apr" name="apr" required>
+            </div>
+            <div class="form-group">
+                <label for="may">May:</label>
+                <input type="text" id="may" name="may" required>
+            </div>
+            <div class="form-group">
+                <label for="jun">June:</label>
+                <input type="text" id="jun" name="jun" required>
+            </div>
+            <div class="form-group">
+                <label for="jul">July:</label>
+                <input type="text" id="jul" name="jul" required>
+            </div>
+            <div class="form-group">
+                <label for="aug">August:</label>
+                <input type="text" id="aug" name="aug" required>
+            </div>
+            <div class="form-group">
+                <label for="sep">September:</label>
+                <input type="text" id="sep" name="sep" required>
+            </div>
+            <div class="form-group">
+                <label for="oct">October:</label>
+                <input type="text" id="oct" name="oct" required>
+            </div>
+            <div class="form-group">
+                <label for="nov">November:</label>
+                <input type="text" id="nov" name="nov" required>
+            </div>
+            <div class="form-group">
+                <label for="dec">December:</label>
+                <input type="text" id="dec" name="dec" required>
+            </div>
+        </div>
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>

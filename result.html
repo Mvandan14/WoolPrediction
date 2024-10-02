@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wool Production Prediction Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h2 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .result-container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #e6e6e6;
+        }
+        .company-info {
+            font-size: 18px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .company-name {
+            font-weight: bold;
+            color: #3498db;
+        }
+        .company-state {
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-container">
+        <h2>Predicted Wool Production for 2024</h2>
+        <div class="company-info">
+            <span class="company-name">{{ name }}</span> in <span class="company-state">{{ state }}</span>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Month</th>
+                    <th>Predicted Production (2024)</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for month, prediction in predictions.items() %}
+                <tr>
+                    <td>{{ month }}</td>
+                    <td>{{ prediction }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
